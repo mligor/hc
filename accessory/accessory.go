@@ -113,6 +113,12 @@ func (a *Accessory) UpdateIDs() {
 	}
 }
 
+func (a *Accessory) SetAndUpdateIDs(id int64) {
+	a.ID = id
+	a.idCount = id + 1
+	a.UpdateIDs()
+}
+
 // Equal returns true when receiver has the same services and id as the argument.
 func (a *Accessory) Equal(other interface{}) bool {
 	if accessory, ok := other.(*Accessory); ok == true {
