@@ -2764,6 +2764,53 @@
             "Permissions": [
                 "securedRead"
             ]
+        },
+        {
+            "Format": "string",
+            "UUID": "0000009B-0000-1000-8000-0026BB765291",
+            "Properties": [
+                "read",
+                "cnotify",
+                "uncnotify"
+            ],
+            "Name": "Current Time",
+            "Permissions": [
+                "securedRead"
+            ]
+        },
+        {
+            "Format": "bool",
+            "UUID": "56E59150-4452-4AD2-9800-5EC874C7F462",
+            "Properties": [
+                "read",
+                "cnotify",
+                "uncnotify"
+            ],
+            "Name": "Rain",
+            "Permissions": [
+                "securedRead"
+            ]
+        },
+        {
+            "Format": "uint8",
+            "UUID": "DCD72283-F93D-49C8-B4C6-D1C192F76106",
+            "Properties": [
+                "read",
+                "cnotify",
+                "uncnotify"
+            ],
+            "Name": "Sunrise Sunset",
+            "Permissions": [
+                "securedRead"
+            ],
+            "Constraints": {
+                "ValidValues": {
+                    "0": "Day",
+                    "1": "Sunrise",
+                    "2": "Sunset",
+                    "3": "Night"
+                }
+            }
         }
     ],
     "Version": "1.0",
@@ -3381,6 +3428,17 @@
             ],
             "Name": "Camera Recording Management",
             "UUID": "00000204-0000-1000-8000-0026BB765291"
+        },
+        {
+            "RequiredCharacteristics": [
+                "0000009B-0000-1000-8000-0026BB765291"
+            ],
+            "OptionalCharacteristics": [
+                "DCD72283-F93D-49C8-B4C6-D1C192F76106"
+            ],
+
+            "Name": "Current Time",
+            "UUID": "670899F9-033E-4CF9-BA2F-62EED448BA06"
         }
     ]
 }

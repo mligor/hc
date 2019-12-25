@@ -10,7 +10,7 @@ type CurrentTime struct {
 func NewCurrentTime() *CurrentTime {
 	char := NewString(TypeCurrentTime)
 	char.Format = FormatString
-	char.Perms = []string{PermRead, PermWrite}
+	char.Perms = []string{PermRead, PermEvents}
 
 	char.SetValue("")
 

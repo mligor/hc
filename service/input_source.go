@@ -14,10 +14,6 @@ type InputSource struct {
 	InputSourceType        *characteristic.InputSourceType
 	IsConfigured           *characteristic.IsConfigured
 	CurrentVisibilityState *characteristic.CurrentVisibilityState
-	Identifier             *characteristic.Identifier
-	InputDeviceType        *characteristic.InputDeviceType
-	TargetVisibilityState  *characteristic.TargetVisibilityState
-	Name                   *characteristic.Name
 }
 
 func NewInputSource() *InputSource {
@@ -35,18 +31,6 @@ func NewInputSource() *InputSource {
 
 	svc.CurrentVisibilityState = characteristic.NewCurrentVisibilityState()
 	svc.AddCharacteristic(svc.CurrentVisibilityState.Characteristic)
-
-	svc.Identifier = characteristic.NewIdentifier()
-	svc.AddCharacteristic(svc.Identifier.Characteristic)
-
-	svc.InputDeviceType = characteristic.NewInputDeviceType()
-	svc.AddCharacteristic(svc.InputDeviceType.Characteristic)
-
-	svc.TargetVisibilityState = characteristic.NewTargetVisibilityState()
-	svc.AddCharacteristic(svc.TargetVisibilityState.Characteristic)
-
-	svc.Name = characteristic.NewName()
-	svc.AddCharacteristic(svc.Name.Characteristic)
 
 	return &svc
 }

@@ -14,14 +14,6 @@ type Television struct {
 	ActiveIdentifier   *characteristic.ActiveIdentifier
 	ConfiguredName     *characteristic.ConfiguredName
 	SleepDiscoveryMode *characteristic.SleepDiscoveryMode
-	Brightness         *characteristic.Brightness
-	ClosedCaptions     *characteristic.ClosedCaptions
-	DisplayOrder       *characteristic.DisplayOrder
-	CurrentMediaState  *characteristic.CurrentMediaState
-	TargetMediaState   *characteristic.TargetMediaState
-	PictureMode        *characteristic.PictureMode
-	PowerModeSelection *characteristic.PowerModeSelection
-	RemoteKey          *characteristic.RemoteKey
 }
 
 func NewTelevision() *Television {
@@ -39,30 +31,6 @@ func NewTelevision() *Television {
 
 	svc.SleepDiscoveryMode = characteristic.NewSleepDiscoveryMode()
 	svc.AddCharacteristic(svc.SleepDiscoveryMode.Characteristic)
-
-	svc.Brightness = characteristic.NewBrightness()
-	svc.AddCharacteristic(svc.Brightness.Characteristic)
-
-	svc.ClosedCaptions = characteristic.NewClosedCaptions()
-	svc.AddCharacteristic(svc.ClosedCaptions.Characteristic)
-
-	svc.DisplayOrder = characteristic.NewDisplayOrder()
-	svc.AddCharacteristic(svc.DisplayOrder.Characteristic)
-
-	svc.CurrentMediaState = characteristic.NewCurrentMediaState()
-	svc.AddCharacteristic(svc.CurrentMediaState.Characteristic)
-
-	svc.TargetMediaState = characteristic.NewTargetMediaState()
-	svc.AddCharacteristic(svc.TargetMediaState.Characteristic)
-
-	svc.PictureMode = characteristic.NewPictureMode()
-	svc.AddCharacteristic(svc.PictureMode.Characteristic)
-
-	svc.PowerModeSelection = characteristic.NewPowerModeSelection()
-	svc.AddCharacteristic(svc.PowerModeSelection.Characteristic)
-
-	svc.RemoteKey = characteristic.NewRemoteKey()
-	svc.AddCharacteristic(svc.RemoteKey.Characteristic)
 
 	return &svc
 }
