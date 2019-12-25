@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 )
 
-var LibPath = os.ExpandEnv("$GOPATH/src/github.com/brutella/hc")
+var LibPath = os.ExpandEnv("./")
 var GenPath = filepath.Join(LibPath, "gen")
 var MetadataPath = filepath.Join(GenPath, "metadata.json")
 var SvcFilePath = filepath.Join(LibPath, "service/README.md")
